@@ -357,6 +357,10 @@ public:
     Setting<bool> allowNewPrivileges{this, false, "allow-new-privileges",
         "Whether builders can acquire new privileges by calling programs with "
         "setuid/setgid bits or with file capabilities."};
+
+    Setting<bool> allowPrivateNetwork{this, true, "allow-private-network",
+        "Whether to enable private network in sandbox"};
+
 #endif
 
     Setting<Strings> hashedMirrors{this, {"http://tarballs.nixos.org/"}, "hashed-mirrors",

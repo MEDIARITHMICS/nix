@@ -2163,7 +2163,7 @@ void DerivationGoal::startBuilder()
            us.
         */
 
-        if (!fixedOutput)
+        if (!fixedOutput && settings.allowPrivateNetwork)
             privateNetwork = true;
 
         userNamespaceSync.create();
